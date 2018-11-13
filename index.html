@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="target-densitydpi=high-dpi, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta name="viewport"content="width=320,maximum-scale=1.2,user-scalable=yes">
+<meta name="viewport"content="width=320,minimum-scale=0.8,user-scalable=yes">
+<meta name="viewport"content="width=320,user-scalable=yes">
+<link rel="shortcut icon" href="image/icon.png" type="image/x-icon">
+<title>love story</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('./font/digital-7_mono.ttf') format("truetype");
+}
+</style>
+<!-- <audio src="music/bgmusic.ogg" hidden="hidden" autoplay="autoplay">
+</audio> -->
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2017—03-08,</span><br />
+			<span class="space"/><span class="comments">*2017-04-22.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> BruinK; <br />
+			Girl name = <span class="keyword">Mrs</span> BunnyX; <br />
+			<span class="comments">// Fall in love river </span><br />
+			They have been through meeting, knowing, learning and loving; <br />
+			<span class="comments">// Sometimes quarrels occur between them </span><br />
+			But they also love each other; <br />
+			<span class="comments">// AS time goes on </span><br />
+			The girl is the world to the boy; <br />
+			<span class="comments">// At the same time </span><br />
+			The girl can not be separated from the boy; <br />
+			<span class="comments">// They had one wonderful trips </span><br />
+			<span class="comments">// The boy promised to take the girl to travel around more places and take more beautiful photos for her</span><br />
+			<span class="keyword">The boy</span> wants to take care of the girl and make her <span class="keyword">happy </span>all her life;<br />
+			<span class="keyword">The girl</span> is also very <span class="keyword">happy</span> with the boy;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is windy or rainy</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future</span><br />
+			<span class="placeholder"/>The boy has but one dream; <br />
+			<span class="comments">// The boy wants to give the girl a happy sweet home</span><br />
+			<br>
+			<br>
+			I want to say:<br />
+			X, I love you .<br />
+			Together we'll stay,<br />
+			always and forever! <br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					We have been in love for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<div class="love1">Happy Tanabata Festival~</div>
+					<div class="signature">- Mr.BruinK</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">a love story between us</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017, 4, 22);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 10000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
